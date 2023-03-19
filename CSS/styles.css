@@ -1,0 +1,262 @@
+/*******************************************/
+/*          Estilos para index.html        */
+/*Autor: Brandon Emilio Gonzalez Villarreal*/
+/*******************************************/
+body {
+    background-color: black;
+    margin:0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+p{
+    color: #fff;
+    font-size: 18px;
+    font-family: '8-bit Operator+ 8', sans-serif;
+}
+
+.life-bar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 50%;
+    align-items: center ;
+}
+
+
+#percentage-bar {
+    background-color: rgb(164, 164, 164); 
+    width: 45%;
+    height: 20px;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    margin: 10px;
+    transition: background-color 0.2s ease;
+    transition: width 0.2s ease-in-out;
+  }
+  
+
+#frase {
+    margin-left: 10%;
+    font-size: 15px;
+    font-family: '8-bit Operator+ 8', sans-serif;
+    color: #000000;
+    position: absolute;
+    z-index: 2;
+    padding: 0 15px 0 15px;
+}
+
+.container {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-block {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 2% 0;
+}
+
+.sans {
+    margin-left: 35%;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: opacity 0.5 s ease-in-out;
+}
+
+.globo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 100px;
+    position: relative;
+}
+
+.globo-img {
+    display:none;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.buttons1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 2% 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 2% 0;
+}
+
+.dialog {
+    width: 50%;
+    min-width: 250px;
+    min-height: 210px;
+    height: 30vh;
+    border: 4px solid white;
+}
+
+.buttons1 button{
+    width: 230px;
+    height: 60px;
+    background-color: #000000;
+    border: 2px solid rgb(255, 136, 0);
+    color: rgb(255, 136, 0);
+    font-family: '8-bit Operator+ 8', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buttons2 button{
+    width: 180px;
+    height: 60px;
+    background-color: #000000;
+    border: 2px solid white;
+    color: white;
+    font-family: '8-bit Operator+ 8', sans-serif;
+    font-size: 15px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.buttons1 button:hover{
+    display: block;
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.buttons img{
+    width: 20px;
+    height: auto;
+    margin-right: 15px;
+    display: none;
+}
+
+#opcion1:hover img{
+    display: inline-block;
+}
+#opcion2:hover img{
+    display: inline-block;
+}
+#opcion3:hover img{
+    display: inline-block;
+}
+#opcion4:hover img{
+    display: inline-block;
+}
+#opcion5:hover img{
+    display: inline-block;
+}
+#opcion6:hover img{
+    display: inline-block;
+}
+#opcion7:hover img{
+    display: inline-block;
+}
+#opcion8:hover img{
+    display: inline-block;
+}
+#opcion9:hover img{
+    display: inline-block;
+}
+
+
+
+.buttons2 button:hover {
+    color: rgb(131, 131, 131);
+    border: 2px solid rgb(131, 131, 131);
+}
+
+.button-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+}
+
+#opcion8:hover{
+    color: red;
+    border: 2px solid red;
+}
+
+/*MENU*/
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#menu li {
+    width: 100%;
+    padding: 10px 0;
+    margin:0;
+}
+#menu{
+    margin: 0;
+    padding: 0;
+}
+#menu li a{
+    text-decoration: none;
+    font-family: '8-bit Operator+ 8', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+}
+li:focus{
+  background-color: #6e6e6e;
+}
+
+#my-image{
+    display: none;
+}
+
+@media(max-width:600px){
+    .buttons1 button{
+        width: 150px;
+        height: 80px;
+    }
+    .buttons1{
+        margin-top: 30px;
+    }
+    .buttons2{
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-5px, 0); }
+    20%, 40%, 60%, 80% { transform: translate(5px, 0); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .shaking-image {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }

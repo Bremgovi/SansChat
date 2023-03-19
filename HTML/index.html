@@ -1,0 +1,59 @@
+<!-- Este es un HTML que simula una conversación con
+    Sans de Undertale con un menu similar al del juego
+    Autor: Brandon Emilio Gonzalez Villarreal-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A little story</title>
+</head>
+<body>
+    <audio id="final-hit">
+        <source src="../media/audio/damage.wav" type="audio/wav">
+    </audio>
+    <audio id="hit">
+        <source src="../media/audio/hit.wav" type="audio/wav">
+    </audio>   
+    <audio id="music" src="../media/audio/music.mp3" type="audio/mpeg" autoplay loop></audio>   
+    <div class="container">
+        <div class="buttons2 buttons">
+            <button id="opcion4" class="button"><img src="../media/img/heart2.png">Make Sans Roll</button>
+            <button id="opcion5" class="button"><img src="../media/img/heart2.png">Stop Rolling</button>
+            <button id="opcion6" class="button"><img src="../media/img/heart2.png">Change to papyrus</button>
+            <button id="opcion7" class="button"><img src="../media/img/heart2.png">Change to sans</button>
+            <button id="opcion8" class="button"><img src="../media/img/heart.png">Attack</button>
+        </div>
+        <div class="img-block">
+            <img id="sans" class="sans" src="../media/img/sans.gif">
+            <div class="globo">
+                <img src="../media/img/globo.png" class="globo-img hidden">
+                <p id="frase"></p>
+            </div>
+        </div>
+        <div class="life-bar">
+            <p>Health</p>
+            <div id="percentage-bar"></div>
+        </div>
+        <div class="dialog">
+            <ul id="menu" class="hidden">
+                <li tabindex="-1"><a href="#">Flirt.</a></li>
+                <li tabindex="-1"><a href="#">Give a compliment.</a></li>
+                <li tabindex="-1"><a href="#">Hug</a></li>
+                <li tabindex="-1"><a href="#">Encourage</a></li>
+                <li tabindex="-1"><a href="#">Threat</a></li>
+            </ul>
+        </div>
+        <div class="button-container">
+            <div class="buttons1 buttons">
+                <button id="opcion1" class="button"><img src="../media/img/heart.png">Say Hello</button>
+                <button id="opcion2" class="button"><img src="../media/img/heart.png">Interact</button>
+                <button id="opcion3" class="button"><img src="../media/img/heart.png">Say Goodbye</button>
+                <button id="opcion9" class="button"><img src="../media/img/heart.png">Tell me a joke</button>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
