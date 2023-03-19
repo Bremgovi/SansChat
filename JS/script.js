@@ -153,6 +153,7 @@ document.getElementById("opcion6").addEventListener("click", function () {
 })
 
 document.getElementById("opcion7").addEventListener("click", function () {
+    active = false;
     sansImg.src = "../media/img/sans.gif";
 })
 
