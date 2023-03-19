@@ -5,6 +5,8 @@
 body {
     background-color: black;
     margin:0;
+    font-family: '8-bit Operator+ 8', sans-serif;
+    src: url('../media/fonts/8bitoperator_jve.ttf') format('truetype');
 }
 
 html {
@@ -14,7 +16,6 @@ html {
 p{
     color: #fff;
     font-size: 18px;
-    font-family: '8-bit Operator+ 8', sans-serif;
 }
 
 .life-bar{
@@ -42,7 +43,6 @@ p{
 #frase {
     margin-left: 10%;
     font-size: 15px;
-    font-family: '8-bit Operator+ 8', sans-serif;
     color: #000000;
     position: absolute;
     z-index: 2;
@@ -125,6 +125,7 @@ p{
     border: 2px solid rgb(255, 136, 0);
     color: rgb(255, 136, 0);
     font-family: '8-bit Operator+ 8', sans-serif;
+    src: url('../media/fonts/8bitoperator_jve.ttf') format('truetype');
     font-size: 20px;
     padding: 10px 20px;
     cursor: pointer;
@@ -137,6 +138,7 @@ p{
     border: 2px solid white;
     color: white;
     font-family: '8-bit Operator+ 8', sans-serif;
+    src: url('../media/fonts/8bitoperator_jve.ttf') format('truetype');
     font-size: 15px;
     padding: 5px 0;
     cursor: pointer;
@@ -225,6 +227,7 @@ p{
 #menu li a{
     text-decoration: none;
     font-family: '8-bit Operator+ 8', sans-serif;
+    src: url('../media/fonts/8bitoperator_jve.ttf') format('truetype');
     font-size: 1.25rem;
     color: white;
 }
