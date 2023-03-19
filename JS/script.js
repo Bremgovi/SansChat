@@ -41,7 +41,7 @@ const hit = document.getElementById('hit');
 const music = document.getElementById('music');
 finalHit.volume = 0.4;
 hit.volume = 0.1;
-music.volume= 0.4;
+music.volume = 0.4;
 
 var active = false;
 var i = 0;
@@ -55,6 +55,8 @@ var frase = document.getElementById("frase");
 var sansImg = document.getElementById("sans");
 var baloonImg = document.querySelector(".globo-img");
 const buttons = document.querySelectorAll('button');
+var opacity = 1;
+
 
 opcion1Boton.addEventListener("click", function () {
     opcion1Boton.disabled = true;
@@ -176,12 +178,19 @@ function decreasePercentageSans() {
     percentageBar.style.backgroundColor = "red";
     if (newPercentage <= 0) {
         deactivate();
+        fadeOut();
         finalHit.play();
         sansImg.src = "../media/img/sans-death.gif";
         sansImg.style.width = "240px";
         setTimeout(function () {
             sansImg.src = "../media/img/death-frame.png"; // change the image after 2 seconds
         }, 1400);
+        setTimeout(function(){
+            setInterval(function(){
+                fadeOutImage(sansImg);
+                fadeOutImage(baloonImg);
+            }, 1200);  
+        },2500)
         frase.innerHTML = "";
         var currentArray = frases["muerte"];
         var indiceActualOpcionMuerte = indiceActual["muerte"];
@@ -220,6 +229,12 @@ function decreasePercentagePapyrus() {
         setTimeout(function () {
             sansImg.src = "../media/img/papyrus-death-frame.png"; // change the image after 2 seconds
         }, 10000);
+        setTimeout(function(){
+            setInterval(function(){
+                fadeOutImage(sansImg);
+                fadeOutImage(baloonImg);
+            }, 1200);  
+        },2500)
         frase.innerHTML = "";
         var currentArray = frases["muerte"];
         var indiceActualOpcionMuerte = indiceActual["muerte"];
@@ -311,4 +326,20 @@ function escribirYReproducir(indiceActual, arrayActual, audioID) {
       playAudio();
     }, 50);
     return intervalID;
+}
+
+function fadeOut() {
+    if (music.volume > 0) {
+      music.volume = music.volume - 0.1;
+      setTimeout(fadeOut, 1500);
+    } else {
+      music.pause();
+    }
+}
+
+function fadeOutImage(img) {
+    if (opacity > 0) {
+      opacity -= 0.1;
+      img.style.opacity = opacity;
+    }
 }

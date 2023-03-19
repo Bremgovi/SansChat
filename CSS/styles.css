@@ -12,6 +12,11 @@
 }
 
 
+img.fade {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
 body {
     font-family: '8bitoperator JVE Regular', sans-serif;
     background-color: black;
